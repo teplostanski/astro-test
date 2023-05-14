@@ -21,7 +21,7 @@ const { Content, frontmatter } = Astro.props.post;
 
 <Layout title={frontmatter.title}>
   <section class="page-content">
-    <Reactions props={frontmatter.slug} client:load />
+    
     <div class="container">
       <Card>
         <a class="btn" href="/blog">Go Back</a>
@@ -34,5 +34,6 @@ const { Content, frontmatter } = Astro.props.post;
         <Content />
       </Card>
     </div>
+    <Reactions props={frontmatter.slug} client:only />
   </section>
 </Layout>

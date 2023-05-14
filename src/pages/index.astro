@@ -13,7 +13,6 @@ import Reactions from "../components/Reactions";
   <Showcase showExtra={true} />
   <Features />
   <section class="page-content">
-    <Reactions props="home" client:load />
     <div class="container">
       <h2>Get Started With Astro</h2>
       <p>
@@ -40,5 +39,6 @@ import Reactions from "../components/Reactions";
         error molestias dolorum, necessitatibus labore?
       </p>
     </div>
+    <Reactions props="home" client:only />
   </section>
 </Layout>
